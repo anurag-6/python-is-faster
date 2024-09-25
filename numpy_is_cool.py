@@ -138,3 +138,62 @@ filtered_arr = arr[mask]
 print(filtered_arr)  # Output: [3 4 5]
 
 
+# --------------------------- 5. Aggregation Functions ---------------------------------
+"""
+Why this way?
+    NumPy's aggregation functions compute summaries (like sum, mean) over arrays efficiently, especially for large datasets.
+
+What was the general (vanilla) way?
+    Using built-in Python functions like sum() or third-party libraries, which are slower for large lists.
+
+What is the advantage of this way?
+    Performance: NumPy functions are optimized and faster.
+    Convenience: Provides a wide range of aggregation functions.
+    Axis Control: Easily aggregate along specific dimensions in multi-dimensional arrays.
+When to consider?
+    Use NumPy's aggregation functions when working with numerical data that requires summary statistics.
+"""
+
+# Summing elements in a list
+arr = [1, 2, 3, 4, 5]
+total_sum = sum(arr)
+print(total_sum)  # Output: 15
+
+
+# Using NumPy's sum function
+arr = np.array([1, 2, 3, 4, 5])
+total_sum = np.sum(arr)
+print(total_sum)  # Output: 15
+
+
+# top methods
+
+# Sum of elements in an array
+sum_of_arr = np.sum(arr)
+
+# Mean (average) of elements in an array
+mean_of_arr = np.mean(arr)
+
+# Median of elements in an array
+median_of_arr = np.median(arr)
+
+# Standard deviation of elements in an array
+std_of_arr = np.std(arr)
+
+# Variance of elements in an array
+var_of_arr = np.var(arr)
+
+# Maximum value in an array
+max_value = np.max(arr)
+
+# Minimum value in an array
+min_value = np.min(arr)
+
+# Index of the minimum value in an array
+min_index = np.argmin(arr)
+
+# Index of the maximum value in an array
+max_index = np.argmax(arr)
+
+# Product of elements in an array
+product_of_arr = np.prod(arr)
